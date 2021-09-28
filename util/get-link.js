@@ -47,10 +47,10 @@ const getLinks = async ({
   // to avoid duplicate song downloads
   extraSearch = extraSearch ? ` ${extraSearch}` : '';
   if (similarity < 0.5) {
-    links = await tryLink(`${itemName} - ${albumName}${extraSearch}`);
+    links = await tryLink(`${itemName} - ${artistName}${extraSearch}`);
   }
   if (!links.length) {
-    links = await tryLink(`${itemName} - ${artistName}${extraSearch}`);
+    links = await tryLink(`${itemName} - ${albumName}${extraSearch}`);
   }
   return links;
 };
